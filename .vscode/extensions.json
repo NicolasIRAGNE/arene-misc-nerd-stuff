@@ -8,6 +8,8 @@
         "christian-kohler.path-intellisense",
         "davidanson.vscode-markdownlint",
         "yzhang.markdown-all-in-one",
-        "vscode-icons-team.vscode-icons"
+        "vscode-icons-team.vscode-icons",
+        "eamodio.gitlens",
+        "psioniq.psi-header"
     ]
 }
