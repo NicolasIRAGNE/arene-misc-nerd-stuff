@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "sonarsource.sonarlint-vscode",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker",
+        "mikestead.dotenv",
+        "christian-kohler.path-intellisense",
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+        "vscode-icons-team.vscode-icons"
+    ]
+}
