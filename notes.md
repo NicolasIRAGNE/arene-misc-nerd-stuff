@@ -45,4 +45,7 @@ i use this as my git client
 it's nice, no extra bullshit
 but you can use anything (except GitKraken)
 
+#### These terms you need to get a grasp of
 
+* rebase (very important later when you work with other people)
+* reset (technically this is still a rebase but yeah)
