@@ -1,12 +1,38 @@
 # Random rambling
 
+## Software i use
+
+* IDE: VSCode
+* Git client: SmartGit
+* Term: kitty w/ zsh (oh-my-zsh)
+
 ## General VSCode stuff
 
 ### Ctrl+Shift+P
 
 your best friend
+
 use it
+
 every day
+
+opens up a command palette, just type in what you want to do and it will probably be there, along with a shortcut
+
+### Other random shortcuts
+
+* vscode shortcuts are your friends here are some nice ones
+  * key modifiers: ctrl, shift
+    * shift: select
+    * ctrl: move one word at a time
+  * use home / end to go to the beginning / end of a line
+  * use page up / page down to go up / down a page
+  * ctrl+d: select the next occurrence of the current selection, repeat to select more occurrences
+  * use keyboard as much as you can
+  * ctrl+r: browser through recent workspaces
+  * ctrl+shift+t: reopen closed tab
+  * ctrl+,: open settings
+  * ctrl+o: open file
+  * ctrl+k ctrl+o: open folder
 
 ### Font
 
@@ -26,18 +52,20 @@ sticky scroll: makes it so it displays wherever you are when editing some big te
 "editor.stickyScroll.enabled": true
 ```
 
-#### Cursor
+makes the cursor nicer:
 
 ```json
 "editor.cursorBlinking": "smooth",
 "editor.cursorSurroundingLines": 10,
 ```
 
-## Other software and general advice i guess
+### Extensions
 
-### Git
+Included in this repo are a list of common useful extensions [.vscode\extensions.json](.vscode\extensions.json).
 
-#### Random stuff
+## Git
+
+### Random stuff
 
 ```bash
 git config --global pull.rebase true
@@ -45,13 +73,21 @@ git config --global pull.rebase true
 
 this option makes it not stupid and prevent you from completely messing up your work when you pull
 
-#### Smartgit
+```bash
+git config --add oh-my-zsh.hide-dirty 1
+```
+
+this can be useful if you notice that your terminal is very slow in bigger repos
+
+### Client
 
 https://www.syntevo.com/smartgit/
 
 i use this as my git client
+
 it's nice, no extra bullshit
-but you can use anything (except GitKraken)
+
+but you can use anything (except GitKraken (has some VERY error-prone behavior))
 
 ### These terms you need to get a grasp of
 
@@ -67,24 +103,20 @@ but you can use anything (except GitKraken)
 * use gitignore (use gitignore.io)
 * (advanced) use unit tests and integration tests along with a CI/CD pipeline
   * (advanced) these tests should be integrated to your IDE so you can run them easily without having to run the whole pipeline
+* squash commits when necessary. try to keep your history clean and readable.
+
+## Other random unorganized rambling
+
 * use SPACES not tabs (should change literally nothing in your life but some software breaks with tabs)
-* use a linter (eslint, prettier, sonarlint, etc)
+* **use a linter (eslint, prettier, sonarlint, etc)**
+  * this is very important and one of the first things you should setup. It will pick up on a lot of stupid mistakes and enforce a common style.
+  * *always* use sonarlint, along with another language-specific linter (e.g. eslint for JS)
 * if something is frustrating, STOP WHAT YOU ARE DOING AND FIX IT ON THE SPOT EVEN IF IT TAKES YOU 3 HOURS
-* brain power is more expensive than computer power. your energy / wellbeing is your most important resource. unhappy programmers are bad programmers.
+  * brain power is more expensive than computer power. your energy / wellbeing is your most important resource. unhappy programmers are bad programmers.
 * **document WHAT your code does and WHY, not HOW**
   * try to document all your APIs / interfaces, in JSDoc or whatever your language uses
-  * DO NOT WRITE DOCUMENTATION YOURSELF. OUTDATED DOCUMENTATION IS WORSE THAN NO DOCUMENTATION
-* **SSOT** (google it, extremely important)
-* vscode shortcuts are your friends here are some nice ones
-  * key modifiers: ctrl, shift
-    * shift: select
-    * ctrl: move one word at a time
-  * use home / end to go to the beginning / end of a line
-  * use page up / page down to go up / down a page
-  * ctrl+d: select the next occurrence of the current selection, repeat to select more occurrences
-  * use keyboard as much as you can
-  * ctrl+r: browser through recent workspaces
-  * ctrl+shift+t: reopen closed tab
+  * DO NOT WRITE DOCUMENTATION YOURSELF. OUTDATED / WRONG DOCUMENTATION IS WORSE THAN NO DOCUMENTATION
+* (advanced) **SSOT** (google it, extremely important)
 * use a password manager (KeePassXC)
 * everytime you use a tool, try to understand its philosophy and how it works
 * try to use standard / cross-platform tools (or understand how they interact)
@@ -94,7 +126,7 @@ but you can use anything (except GitKraken)
   * try to use it as your main OS for a while. try to understand the philosophy behind it. it will probably break at some point. fix it and learn from it.
   * start with mint or ubuntu. they are easy to get up and running. use the terminal as much as you can.
   * (very advanced) try to use an arch-based distro. you will cry. you will learn. but you will cry. but it's the best way to understand how a system works as a whole.
-* (opinionated) use headers in your files. indicate their purpose, author, date, etc (automated, of course)
+* (opinionated) use headers in your files. indicate their purpose, author, date, etc (automated, of course) (i use [psioniq file header](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header))
 * if working together, enforce a code style and common practices using shared config files
 * try to integrate as much stuff as you can into your IDE. context switching is bad for performance (both computer and human)
 * review your code and your teammates' code. be harsh but not stupid. reject PRs that are not up to standards. enforce quality.
