@@ -10,6 +10,7 @@
         "yzhang.markdown-all-in-one",
         "vscode-icons-team.vscode-icons",
         "eamodio.gitlens",
-        "psioniq.psi-header"
+        "psioniq.psi-header",
+        "ibm.output-colorizer"
     ]
 }
