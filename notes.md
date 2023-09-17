@@ -134,3 +134,46 @@ but you can use anything (except GitKraken (has some VERY error-prone behavior))
 * assume that most of your time will be spent READING code, not writing it. make sure it's readable and don't cut corners.
 * assume that 90% of your problems have already been solved by someone else who devoted their life to it. use their work.
 * the only time you should reinvent the wheel is when you are learning how to make a wheel. and realize you're really bad at making wheels. people have been making wheels for thousands of years. use their wheels. or use your own wheel, that will randomly break and wiggle around and just make your life miserable. (e.g. your sorting algorithm is probably worse than the one in your language's standard library. use theirs.)
+
+### Logging
+
+Logging is the process of spewing relevant information about your program to the console / a file / whatever.
+
+It is *very* important, and also *very* easy to get wrong.
+
+#### What to log
+
+Knowing what to log might not be obvious at first, but you will get a feel for it.
+
+As a rule of thumb, you should log:
+
+* user actions
+* i/o operations (e.g. file read / write / open)
+* errors and warnings
+* important events (e.g. server start / stop, etc)
+* anything that might be useful to debug a problem
+
+It can be hard to find the right balance between too much and too little logging, adjust accordingly.
+
+Your logs **should** contain, at the very least:
+
+* a timestamp
+* the severity of the message (e.g. info, warning, error, etc)
+* the source of the message (e.g. the name of the function that logged it)
+* the message itself
+* if in a debugging context, source code location (e.g. file, line, column) in a way that's parseable by your IDE so you can click on it and go to the source code
+
+This ensures that your logs are 1. readable, 2. searchable, 3. cooperative when running in another program's context.
+
+Use a logging library, they do most of this correctly for you.
+
+#### Allow filtering
+
+You should allow filtering of your logs, at least by severity.
+
+If you're in a debugging context, you probably want trace-level logs. If you're in production, you probably just want info-level logs.
+
+### Error handling
+
+* DO NOT JUST CATCH ERRORS AND IGNORE THEM. handle them. an error going off silently is the worst thing that can happen. it is better to crash than to ignore an error.
+* sometimes, crashing is the behavior you want. if you are in a context where you can't recover from an error, end the program. it's better than continuing in an unknown state. the responsibility of the caller is to handle the error.
